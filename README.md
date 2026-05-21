@@ -48,14 +48,7 @@ python train_phase3.py \
 ### 4. Check Results
 Results saved to `results/results.json` with metrics for each task.
 
-## 📚 Documentation Map
 
-| File | Purpose |
-|------|---------|
-| **README.md** | Start here - architecture overview |
-| **EXAMPLE.md** | Code examples for training and inference |
-| **PROJECT_STRUCTURE.md** | Detailed module descriptions |
-| **setup.py** | Package installation info |
 
 ## 🔧 Key Features
 
@@ -80,17 +73,6 @@ Results saved to `results/results.json` with metrics for each task.
 3. encoders.py (building blocks)
 4. train.py (training logic)
 
-## 🎯 Model Architecture
-
-```
-Input: SMILES, Descriptors, 3D Conformers
-
-┌─ 2D Graph (SMILES) ──→ GAT Encoder ─────┐
-├─ Descriptors ─────────→ MLP Encoder ──┬─→ Gated Fusion ─→ ┌─ Contact Head
-└─ 3D Conformers ──→ Multi-Conf EGNN ──┴──────────────────├─ Oral Head
-                                                            └─ Overall Head
-                                        (Hierarchical: Overall uses Contact + Oral)
-```
 
 ## 💻 System Requirements
 
@@ -110,26 +92,7 @@ If you use GeoTriNet, please reference:
 }
 ```
 
-## 📬 File Summary
 
-```
-geotri-net/
-├── 🎯 train_phase3.py       ← Start here: main training script
-├── 📖 README.md              ← Architecture overview  
-├── 📚 EXAMPLE.md             ← Usage examples
-├── 🔨 setup.py               ← Package installation
-├── 📋 requirements.txt        ← Dependencies
-│
-├── 🧠 models.py              ← GeoTriNet main class
-├── 🧩 encoders.py            ← Neural network modules
-├── 🧬 features.py            ← Molecular feature extraction
-├── 📊 data.py                ← Dataset loading
-├── 📈 metrics.py             ← Evaluation metrics
-├── 🔄 train.py               ← Training loop & loss functions
-│
-├── 📄 LICENSE                ← MIT License
-├── 🚫 .gitignore             ← Git settings
-└── 📋 PROJECT_STRUCTURE.md   ← Detailed documentation
 ```
 
 ## 🔗 Next Steps
